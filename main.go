@@ -104,12 +104,15 @@ func createGitIgnoreFile(name string) error {
 		fmt.Println("Could not create '.gitignore' file.")
 		log.Println(err)
 	}
+	// TODO: write into the '.gitignore' file.
 
 	return nil
 }
 
 func main() {
 	msg := askProjectName()
+	// TODO: ask for domain name and user name to provide
+	// to the 'go mod init' command.
 	msg = createProjectDirectory(msg.line)
 	createProjectFiles(msg.line)
 }
